@@ -1,0 +1,319 @@
+body {
+    
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        animation: slideIn 1s ease-out;
+    }
+    
+    .container:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    }
+    
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+        color: #333;
+        margin: 0;
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    .summary {
+        margin-bottom: 30px;
+    }
+    
+    .customer-info, .details {
+        margin-bottom: 20px;
+    }
+    
+    .customer-info h2, .details h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 600;
+        animation: fadeInUp 1s ease-in-out;
+    }
+    
+    .box {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .box h3 {
+        margin-top: 0;
+        color: #555;
+    }
+    
+    .total {
+        margin-bottom: 30px;
+    }
+    
+    .total h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 15px;
+        animation: fadeInUp 1.5s ease-in-out;
+    }
+    
+    .grand-total {
+        color: #d9534f;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+    
+    .payment {
+        text-align: center;
+    }
+    
+    .button {
+        display: inline-block;
+        padding: 15px 35px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #28a745;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 6px;
+        border: none;
+        transition: background-color 0.3s, transform 0.2s;
+        animation: pulse 2s infinite;
+    }
+    
+    .button:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes pulse {
+        0% {
+            background-color: #28a745;
+        }
+        50% {
+            background-color: #218838;
+        }
+        100% {
+            background-color: #28a745;
+        }
+    }
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #333;
+}
+
+.summary {
+    margin-bottom: 30px;
+}
+
+.customer-info, .details {
+    margin-bottom: 20px;
+}
+
+.customer-info h2, .details h3 {
+    color: #333;
+}
+
+.detail-item {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.detail-item h3 {
+    margin-top: 0;
+}
+
+.total {
+    margin-bottom: 20px;
+}
+
+.grand-total {
+    color: #d9534f;
+    font-size: 1.6em;
+}
+
+.payment {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #5bc0de;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.button:hover {
+    background-color: #31b0d5;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+}
+
+.summary {
+    margin-bottom: 30px;
+}
+
+.customer-info, .details {
+    margin-bottom: 20px;
+}
+
+.customer-info h2, .details h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.total {
+    margin-bottom: 30px;
+}
+
+.total h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.grand-total {
+    color: #d9534f;
+    font-size: 1.8em;
+}
+
+.payment {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #218838;
+}

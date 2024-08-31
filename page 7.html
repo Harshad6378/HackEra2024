@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Payment</title>
+    <link rel="stylesheet" href="page 7.css">
+</head>
+<body>
+    <header>
+        <h1>Complete Your Payment</h1>
+    </header>
+
+    <main>
+        <section id="payment-section">
+            <h2>Payment Details</h2>
+            <form id="payment-form">
+                <label for="amount">Amount (USD):</label>
+                <input type="number" id="amount" name="amount" placeholder="e.g. 100" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="e.g. john.doe@example.com" required>
+
+                <label for="coupon">Coupon Code (Optional):</label>
+                <input type="text" id="coupon" name="coupon" placeholder="Enter coupon code">
+
+                <label for="payment-method">Choose Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="paytm">Paytm</option>
+                    <option value="google-pay">Google Pay</option>
+                    <option value="card">Credit/Debit Card</option>
+                </select>
+
+                <!-- Card Payment Details -->
+                <div id="card-details" class="hidden">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+
+                    <label for="card-expiry">Expiry Date:</label>
+                    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" maxlength="5">
+
+                    <label for="card-cvc">CVC:</label>
+                    <input type="text" id="card-cvc" name="card-cvc" placeholder="123" maxlength="3">
+                </div>
+
+                <button type="submit" id="pay-button">Pay Now</button>
+            </form>
+
+            <div id="payment-status"></div>
+        </section>
+    </main>
+
+    <!-- Include Google Pay API -->
+    <script src="https://pay.google.com/gp/p/js/pay.js"></script>
+
+    <script>
+        document.getElementById('payment-method').addEventListener('change', (event) => {
+            const method = event.target.value;
+            const cardDetails = document.getElementById('card-details');
+            if (method === 'card') {
+                cardDetails.classList.remove('hidden');
+            } else {
+                cardDetails.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('payment-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const amount = document.getElementById('amount').value;
+            const email = document.getElementById('email').value;
+            const coupon = document.getElementById('coupon').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+
+            if (paymentMethod === 'paytm') {
+                handlePaytmPayment(amount, email, coupon);
+            } else if (paymentMethod === 'google-pay') {
+                handleGooglePayPayment(amount, email, coupon);
+            } else if (paymentMethod === 'card') {
+                handleCardPayment(amount, email, coupon);
+            }
+        });
+
+        function handlePaytmPayment(amount, email, coupon) {
+            document.getElementById('payment-status').textContent = 'Redirecting to Paytm...';
+            document.getElementById('payment-status').style.color = 'blue';
+            window.location.href = `https://paytm.com/payment?amount=${amount}&email=${email}&coupon=${coupon}`;
+        }
+
+        function handleGooglePayPayment(amount, email, coupon) {
+            const paymentRequest = {
+                apiVersion: 2,
+                apiVersionMinor: 0,
+                allowedPaymentMethods: [{
+                    type: 'CARD',
+                    parameters: {
+                        allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+                        allowedCardNetworks: ['MASTERCARD', 'VISA']
+                    }
+                }],
+                transactionInfo: {
+                    totalPriceStatus: 'FINAL',
+                    totalPrice: amount.toString(),
+                    currencyCode: 'USD'
+                },
+                merchantInfo: {
+                    merchantName: 'Example Merchant'
+                }
+            };
+
+            const paymentsClient = new google.payments.api.PaymentsClient({environment: 'TEST'});
+
+            paymentsClient.loadPaymentData(paymentRequest).then(function(paymentData) {
+                document.getElementById('payment-status').textContent = 'Payment successful with Google Pay!';
+                document.getElementById('payment-status').style.color = 'green';
+            }).catch(function(err) {
+                document.getElementById('payment-status').textContent = 'Payment failed: ' + err.message;
+                document.getElementById('payment-status').style.color = 'red';
+            });
+        }
+
+        function handleCardPayment(amount, email, coupon) {
+            // Simulated card payment process
+            document.getElementById('payment-status').textContent = 'Processing card payment...';
+            document.getElementById('payment-status').style.color = 'blue';
+
+            // Example card payment flow (Replace with actual card payment integration)
+            setTimeout(() => {
+                document.getElementById('payment-status').textContent = 'Payment successful with Card!';
+                document.getElementById('payment-status').style.color = 'green';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

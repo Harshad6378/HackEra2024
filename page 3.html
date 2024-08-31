@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planner - Sign Up</title>
+  <link rel="stylesheet" href="page 3.css">
+</head>
+<body>
+
+  <header>
+    <h1>Travel Planner</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Itinerary</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="signup">
+    <div class="signup-container">
+      <h2>Create Your Account</h2>
+      <!-- Modify form action to redirect to page4.html -->
+      <form action="page4.html" method="post">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+        
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter a strong password" required>
+        
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+        
+        <button type="submit">Sign Up</button>
+
+        <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Travel Planner © 2024</p>
+  </footer>
+
+</body>
+</html>

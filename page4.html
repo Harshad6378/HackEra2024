@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planner - Budget & Information</title>
+  <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+
+  <header>
+    <h1>Travel Planner</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Itinerary</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Budget Input Section -->
+  <section id="budget-input">
+    <h2>Plan Your Trip According to Your Budget</h2>
+    <form action="#" method="post">
+      <label for="budget">Enter Your Budget (in USD):</label>
+      <input type="number" id="budget" name="budget" placeholder="e.g. 1500" required>
+
+      <label for="destination">Select Your Destination:</label>
+      <select id="destination" name="destination" required>
+        <option value="">Select Destination</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="newyork">New York</option>
+        <option value="sydney">Sydney</option>
+      </select>
+
+      <!-- New Departure Date Field -->
+      <label for="departure-date">Select Departure Date:</label>
+      <input type="date" id="departure-date" name="departure-date" required>
+
+      <!-- New Departure Destination Field -->
+      <label for="departure-destination">Select Departure place:</label>
+      <select id="departure-destination" name="departure-destination" required>
+        <option value="">Select Departure Destination</option>
+        <option value="london">London</option>
+        <option value="dubai">Dubai</option>
+        <option value="berlin">Berlin</option>
+        <option value="madrid">Madrid</option>
+      </select>
+
+      <button type="submit">Get Information</button>
+    </form>
+  </section>
+
+  <!-- Travel Information Section -->
+  <section id="travel-info">
+    <h2>Travel Information</h2>
+
+    <!-- Weather Information -->
+    <div class="info-block">
+      <h3>Current Weather in <span id="location">Selected Region</span></h3>
+      <p>Temperature: <span id="temperature">25°C</span></p>
+      <p>Condition: <span id="weather-condition">Sunny</span></p>
+    </div>
+
+    <!-- Events Information -->
+    <div class="info-block">
+      <h3>Ongoing Events in <span id="event-location">Selected Region</span></h3>
+      <ul id="event-list">
+        <li>Music Festival - August 15</li>
+        <li>Art Exhibition - August 18</li>
+        <li>Food Fair - August 20</li>
+      </ul>
+    </div>
+
+    <!-- Hotel Information -->
+    <div class="info-block">
+      <h3>Hotel Stay Details</h3>
+      <p>Recommended Hotels:</p>
+      <ul id="hotel-list">
+        <li>Hotel Le Meurice - $300 per night (Paris)</li>
+        <li>Park Hyatt - $450 per night (Tokyo)</li>
+        <li>Waldorf Astoria - $500 per night (New York)</li>
+        <li>Shangri-La Hotel - $350 per night (Sydney)</li>
+      </ul>
+    </div>
+
+    <!-- Departure Information -->
+    <div class="info-block">
+      <h3>Departure Information</h3>
+      <p>Departure Date: <span id="departure-info">Selected Date</span></p>
+      <p>Departure : <span id="departure-destination-info">Selected place</span></p>
+    </div>
+  </section>
+
+  <!-- Explore Option -->
+  <section id="explore">
+    <h2>Explore Your Destination</h2>
+    <p>Discover the best attractions, dining options, and cultural landmarks at your selected destination.</p>
+    <a href="page5.html" id="explore-btn" class="button">Explore Now</a>
+  </section>
+
+  <footer>
+    <p>Travel Planner © 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #ff6347;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: #fff;
+    font-size: 2.5em;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;
+  }
+  
+  /* Budget Input Section */
+  #budget-input {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  #budget-input h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  #budget-input label {
+    display: block;
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  #budget-input input,
+  #budget-input select {
+    padding: 10px;
+    font-size: 1.1em;
+    width: 300px;
+    margin: 10px 0;
+  }
+  
+  #budget-input button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #budget-input button:hover {
+    background-color: #ffa07a;
+  }
+  
+  /* Travel Information Section */
+  #travel-info {
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  #travel-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .info-block {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-block h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .info-block p {
+    font-size: 1.2em;
+  }
+  
+  /* Explore Section */
+  #explore {
+    padding: 50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #explore h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  #explore p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  #explore-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #explore-btn:hover {
+    background-color: #ff6347;
+    color: #fff;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
